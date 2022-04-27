@@ -1,8 +1,16 @@
-function Footer() {
+import { getYear } from "../utilities/dates";
+
+function Footer(title, copyright, author) {
   return (
     <footer>
-        
+      <p>
+        &copy; {title} by {author} {copyright}
+      </p>
     </footer>
-  )
+  );
 }
-export default Footer
+
+Footer.defaultProps = {
+  copyright: getYear(),
+};
+export default Footer;
