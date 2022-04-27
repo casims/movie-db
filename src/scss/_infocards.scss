@@ -3,30 +3,53 @@
 
 .info-card {
     margin: 0 auto;
-    max-width: 88%;
+    width: 88%;
+    max-width: 62.5rem;
     border-radius: 15px;
     background-color: $darkGrey;
     font-family: 'SourceSans Light';
     h2 {
         color: $yellow;
-        font-size: 36px;
+        font-size: 2.25rem;
         padding: 1rem 1.3rem 0;
         position: relative;
-    }
-    h2::after {
-        content: '';
-        width: 90%;
-        height: .15rem;
-        margin: 0 auto;
-        background-color: $yellow;
-        position: absolute;
-        bottom: -.8rem;
-        left: 0;
-        right: 0;
+        &::after {
+            content: '';
+            height: .15rem;
+            margin: 0 auto;
+            background-color: $yellow;
+            position: absolute;
+            bottom: -.8rem;
+            left: 4%;
+            right: 4%;
+        }
     }
     p {
         color: $white;
-        font-size: 20px;
+        font-size: 1.25rem;
         padding: 0 1.3rem 1.3rem 1.3rem;
+    }
+}
+
+#favorites-card p {
+    padding-top: 1.3rem;
+}
+
+@media (min-width: 560px) {
+    .info-card {
+        h2 {
+            padding: 2rem 2.6rem 0;
+            &::after {
+                left: 3%;
+                right: 3%;
+            }
+        }
+        p {
+            padding: 0 2.6rem 2.6rem 2.6rem;
+        }
+    }
+
+    #favorites-card p {
+        padding-top: 2.6rem;
     }
 }

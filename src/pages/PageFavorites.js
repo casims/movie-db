@@ -8,8 +8,8 @@ const PageFavorites = () => {
     }, []);
 
   return (
-    <section>
-
+    <section id="favorites-card" className="info-card">
+      <p>Sorry, but you have no favorite movies right now. Return to the home screen and tap the "star" icon on a movie to favorite it.</p>
     </section>
   )
 }
