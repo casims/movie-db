@@ -8,6 +8,7 @@ import PageHome from "../pages/PageHome";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
+import '../scss/styles.scss'
 
 function AppRouter() {
   return (

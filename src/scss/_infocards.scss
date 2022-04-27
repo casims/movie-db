@@ -1,0 +1,32 @@
+@use "variables" as *;
+@use "fonts" as *;
+
+.info-card {
+    margin: 0 auto;
+    max-width: 88%;
+    border-radius: 15px;
+    background-color: $darkGrey;
+    font-family: 'SourceSans Light';
+    h2 {
+        color: $yellow;
+        font-size: 36px;
+        padding: 1rem 1.3rem 0;
+        position: relative;
+    }
+    h2::after {
+        content: '';
+        width: 90%;
+        height: .15rem;
+        margin: 0 auto;
+        background-color: $yellow;
+        position: absolute;
+        bottom: -.8rem;
+        left: 0;
+        right: 0;
+    }
+    p {
+        color: $white;
+        font-size: 20px;
+        padding: 0 1.3rem 1.3rem 1.3rem;
+    }
+}
