@@ -6,10 +6,10 @@ Yellow:
  hex: #fee400
  rgb: 255,228,0
 
-Light Gray: 
+Dark Gray: 
  hex: #2f2f2f
  rgb: 47,47,47
 
-Dark Gray:
+Light Gray:
  hex: #444444
  rgb: 68,68,68 
