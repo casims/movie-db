@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'fonts' as *;
 
-.nav-sort {
+.nav-sort-desktop {
     display: none;
 }
 
@@ -39,9 +39,10 @@
             width: 100%;
             height: 100%;
             display: block;
+            margin: 0;
         }
         .hover-description {
-            background-color: rgba($color: #000000, $alpha: .8);
+            background-color: rgba($color: #000000, $alpha: .7);
             position: absolute;
             top: 0;
             left: 0;
