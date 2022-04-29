@@ -8,7 +8,7 @@ const PageHome = () => {
 
   return (
     <section>
-      <p>page home test</p>
+      <p>Home PageHome</p>
     </section>
   );
 };

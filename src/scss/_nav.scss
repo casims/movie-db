@@ -9,7 +9,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 4.5rem;
 
   @media (min-width: em(800)) {
     flex-wrap: nowrap;
@@ -19,7 +18,7 @@ header {
 img {
   width: 3rem;
   height: 3rem;
-  margin: 0 0.8rem 0;
+  margin: 0.8rem;
   @media (min-width: em(800)) {
     margin: 0 2rem;
   }
