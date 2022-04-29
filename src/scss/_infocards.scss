@@ -29,27 +29,33 @@
         font-size: 1.25rem;
         padding: 0 1.3rem 1.3rem 1.3rem;
     }
+  }
+  p {
+    color: $white;
+    font-size: 1.25rem;
+    padding: 0 1.3rem 1.3rem 1.3rem;
+  }
 }
 
 #favorites-card p {
-    padding-top: 1.3rem;
+  padding-top: 1.3rem;
 }
 
 @media (min-width: 560px) {
-    .info-card {
-        h2 {
-            padding: 2rem 2.6rem 0;
-            &::after {
-                left: 3%;
-                right: 3%;
-            }
-        }
-        p {
-            padding: 0 2.6rem 2.6rem 2.6rem;
-        }
+  .info-card {
+    h2 {
+      padding: 2rem 2.6rem 0;
+      &::after {
+        left: 3%;
+        right: 3%;
+      }
     }
+    p {
+      padding: 0 2.6rem 2.6rem 2.6rem;
+    }
+  }
 
-    #favorites-card p {
-        padding-top: 2.6rem;
-    }
+  #favorites-card p {
+    padding-top: 2.6rem;
+  }
 }

@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+footer {
+  background-color: $darkGrey;
+  color: $white;
+  height: 3rem;
+  font-size: 0.83rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // @media (min-width: em(800)) {
+  //   background-color: red;
+  //   font-size: 5rem;
+  // }
+}
