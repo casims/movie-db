@@ -1,0 +1,50 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+
+.nav-sort {
+    display: none;
+}
+
+.movie-card {
+    background-color: $darkGrey;
+    width: 88%;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    h3 {
+        font-family: 'SourceSans Regular';
+        font-size: 1.5rem;
+        color: $CSyellow;
+        margin: 0;
+        padding: .5rem;
+    }
+    p {
+        font-family: 'SourceSans Light';
+        font-size: 1.25rem;
+        color: $white;
+        margin: 0;
+        padding: 0 .5rem .5rem;
+        span {
+            font-family: 'SourceSans Regular';
+            color: $CSyellow;
+        }
+    }
+    .card-rating {
+        font-size: 1.5rem;
+    }
+    .movie-poster {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .hover-description {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

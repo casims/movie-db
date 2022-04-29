@@ -7,17 +7,16 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 
 function MovieCard({ movie }) {
 
-
     return (
         <div className="movie-card">
-            <div className="hover-description">
-                <p className="single-description">{movie.overview}</p>
-                <Link to={`/single/${movie.id}`}>More Info</Link>
-                <IconButton >
-                    <StarBorderIcon />
-                </IconButton>
-            </div>
             <div className="movie-poster">
+                <div className="hover-description">
+                    <p className="card-description">{movie.overview}</p>
+                    <Link to={`/single/${movie.id}`}>More Info</Link>
+                    <IconButton >
+                        <StarBorderIcon />
+                    </IconButton>
+                </div>
                 {movie.poster_path === null ? 
                     <img src={noPoster} alt="No poster available." /> : 
                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
@@ -25,9 +24,9 @@ function MovieCard({ movie }) {
             </div>
             <div className="movie-info">
                 <h3>{movie.title}</h3>
-                {/* <p className="single-runtime">{singleMovie.runtime + "m"}</p> */}
-                <p className="single-date">{movie.release_date}</p>
-                <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
+                {/* <p className="card-runtime">{movie.runtime}</p> */}
+                <p className="card-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
+                <p className="card-date">Release Date: {movie.release_date}</p>
             </div>
 
         </div>

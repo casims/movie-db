@@ -9,7 +9,6 @@ import PageMovie from "../pages/PageMovie";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
-import PageSingle from "../pages/PageSingle";
 import '../scss/styles.scss'
 
 function AppRouter() {
@@ -25,7 +24,7 @@ function AppRouter() {
                         <Route path="/sort/top-rated" element={<PageHome sort="top_rated" />} />
                         <Route path="/sort/now-playing" element={<PageHome sort="now_playing" />} />
                         <Route path="/sort/upcoming" element={<PageHome sort="upcoming" />} />
-                        <Route path="/single/:id" exact element={<PageSingle />} />
+                        <Route path="/single/:id" exact element={<PageMovie />} />
                         <Route path="/favorites/:id" exact element={<PageFavorites />} />
                         <Route path="/about" exact element={<PageAbout />} />
                         <Route path="*" exact element={<PageNotFound />} />
