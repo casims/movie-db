@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 // Pages
 import PageHome from "../pages/PageHome";
+import PageMovie from "../pages/PageMovie";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
@@ -19,38 +20,29 @@ function AppRouter() {
 
   return (
     <BrowserRouter>
-      <div className="wrapper">
-        <Header
-        // title={appInfo.title}
-        />
-        <main>
-          <Routes>
-            <Route path="/" exact element={<PageHome />} />
-            <Route path="sort/popular" element={<PageHome sort="popular" />} />
-            <Route
-              path="sort/top-rated"
-              element={<PageHome sort="top_rated" />}
-            />
-            <Route
-              path="sort/upcoming"
-              slement={<PageHome sort="upcoming" />}
-            />
-            <Route
-              path="sort/now-playing"
-              element={<PageHome sort="now_playing" />}
-            />
+        <div className="wrapper">
+            <Header />
+                <main>
+                    <Routes>
 
-            <Route path="/favorites" exact element={<PageFavorites />} />
-            <Route path="/about" exact element={<PageAbout />} />
-            <Route path="*" exact element={<PageNotFound />} />
-          </Routes>
-        </main>
-        <Footer
-          title={appInfo.title}
-          copyright={appInfo.copyright}
-          author={appInfo.author}
-        />
-      </div>
+                        <Route path="/" exact element={<PageHome sort="popular" />} />
+                        <Route path="/sort/popular" element={<PageHome sort="popular" />} />
+                        <Route path="/sort/top-rated" element={<PageHome sort="top_rated" />} />
+                        <Route path="/sort/now-playing" element={<PageHome sort="now_playing" />} />
+                        <Route path="/sort/upcoming" element={<PageHome sort="upcoming" />} />
+                        <Route path="/single/:id" exact element={<PageMovie />} />
+                        <Route path="/favorites/:id" exact element={<PageFavorites />} />
+                        <Route path="/about" exact element={<PageAbout />} />
+                        <Route path="*" exact element={<PageNotFound />} />
+
+                    </Routes>
+                </main>
+            <Footer
+              title={appInfo.title}
+              copyright={appInfo.copyright}
+              author={appInfo.author}
+            />
+        </div>
     </BrowserRouter>
   );
 }

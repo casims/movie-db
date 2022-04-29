@@ -1,8 +1,10 @@
 // Main Stylesheet
-@use "./fonts";
-@use "./variables";
-@use "./general";
-@use "./infocards";
+@use './fonts';
+@use './variables';
+@use './general';
+@use './home';
+@use './infocards';
+@use './singlecards';
 @use "./nav";
 @use "./reset";
-@use "./footer.scss";
+@use "./footer";
