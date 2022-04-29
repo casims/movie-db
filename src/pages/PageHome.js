@@ -4,8 +4,6 @@ import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
 import { API_TOKEN } from '../globals/globals';
 
-
-
 function PageHome({ sort }) {
     useEffect(() => {
       document.title = `${appTitle} - Home`;

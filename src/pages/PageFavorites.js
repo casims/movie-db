@@ -12,12 +12,13 @@ const PageFavorites = () => {
   }, []);
 
   return (
-    <section className="favorite-page">
-      {favs.length < 1 ? <p>No favourite kittens. Return to the <Link to="/">home</Link> page to add some favourite kittens.</p> :
+    <section id="favorites-card" className="info-card">
+      {favs.length < 1 ? <p>Sorry, but you have no favorite movies right now. Return to the home screen and tap the "star" icon on a movie to favorite it.</p> :
         <div className="movies-container">
           {favs.map(movie => <MovieCard key={movie.id} movie={movie} isFav={isFav(favs, null, movie.id)}/>)}
         </div>
       }
+
     </section>
   )
 }

@@ -1,0 +1,67 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+
+.nav-sort {
+    display: none;
+}
+
+.movie-card {
+    background-color: $darkGrey;
+    width: 88%;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    h3 {
+        font-family: 'SourceSans Regular';
+        font-size: 1.5rem;
+        color: $CSyellow;
+        margin: 0;
+        padding: .5rem;
+    }
+    p {
+        font-family: 'SourceSans Light';
+        font-size: 1.25rem;
+        color: $white;
+        margin: 0;
+        padding: 0 .5rem .5rem;
+        span {
+            font-family: 'SourceSans Regular';
+            color: $CSyellow;
+        }
+    }
+    .card-rating {
+        font-size: 1.5rem;
+    }
+    .movie-poster {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .hover-description {
+            background-color: rgba($color: #000000, $alpha: .8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            p {
+                padding: 1.5rem .5rem;
+                font-style: italic;
+                line-height: 1.75rem;
+            }
+            a {
+                text-decoration: none;
+                font-family: 'SourceSans Light';
+                font-size: 1.75rem;
+                color: $CSyellow;
+                border: 3px solid $CSyellow;
+                padding: .1rem .5rem;
+                margin: .5rem;
+                position: absolute;
+                bottom: 2rem;
+            }
+        }
+    }
+}

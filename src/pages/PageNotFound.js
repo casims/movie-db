@@ -8,8 +8,9 @@ const PageNotFound = () => {
     }, []);
 
   return (
-    <section>
-
+    <section id="error-card" className="info-card">
+      <h2>404 Error</h2>
+      <p>The page you are looking for was not found.</p>
     </section>
   )
 }
