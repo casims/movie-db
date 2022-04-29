@@ -9,9 +9,15 @@ import PageMovie from "../pages/PageMovie";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
-import '../scss/styles.scss'
+import "../scss/styles.scss";
 
 function AppRouter() {
+  const appInfo = {
+    title: "cs Movie Databese",
+    author: "Connor, David and Michiko",
+    copyright: 2022,
+  };
+
   return (
     <BrowserRouter>
         <div className="wrapper">
@@ -31,10 +37,14 @@ function AppRouter() {
 
                     </Routes>
                 </main>
-            <Footer />
+            <Footer
+              title={appInfo.title}
+              copyright={appInfo.copyright}
+              author={appInfo.author}
+            />
         </div>
     </BrowserRouter>
-  )
+  );
 }
 
 export default AppRouter;

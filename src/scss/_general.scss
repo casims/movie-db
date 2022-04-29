@@ -1,6 +1,7 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 body {
-    background-color: $lightGrey;
-    margin: 0;
+  background-color: $lightGrey;
+  font-family: SourceSans Light;
+  margin: 0;
 }
