@@ -8,8 +8,9 @@ const PageAbout = () => {
     }, []);
 
   return (
-    <section>
-
+    <section id="about-card" className="info-card">
+      <h2>About</h2>
+      <p>The “Movie Database” is an application that allows users to easily search, favorite, and find other valuable information about movies around the world. This application uses the TMDb API. This application was created for educational purposes only.</p>
     </section>
   )
 }
