@@ -7,16 +7,22 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 
 function MovieCard({ movie }) {
 
+    const [isShown, setIsShown] = useState();
+
     return (
         <div className="movie-card">
-            <div className="movie-poster">
-                <div className="hover-description">
-                    <p className="card-description">{movie.overview}</p>
-                    <Link to={`/single/${movie.id}`}>More Info</Link>
-                    <IconButton >
-                        <StarBorderIcon />
-                    </IconButton>
-                </div>
+            <div    className="movie-poster"
+                    onMouseOver={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}>
+                {isShown && 
+                    <div className="hover-description">
+                        <p className="card-description">{movie.overview}</p>
+                        <Link to={`/single/${movie.id}`}>More Info</Link>
+                        <IconButton >
+                            <StarBorderIcon />
+                        </IconButton>
+                    </div>
+                }
                 {movie.poster_path === null ? 
                     <img src={noPoster} alt="No poster available." /> : 
                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
