@@ -9,7 +9,7 @@
     background-color: $darkGrey;
     font-family: 'SourceSans Light';
     h2 {
-        color: $yellow;
+        color: $CSyellow;
         font-size: 2.25rem;
         padding: 1rem 1.3rem 0;
         position: relative;
@@ -17,7 +17,7 @@
             content: '';
             height: .15rem;
             margin: 0 auto;
-            background-color: $yellow;
+            background-color: $CSyellow;
             position: absolute;
             bottom: -.8rem;
             left: 4%;

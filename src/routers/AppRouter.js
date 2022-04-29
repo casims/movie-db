@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 // Pages
 import PageHome from "../pages/PageHome";
+import PageMovie from "../pages/PageMovie";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
@@ -18,6 +19,7 @@ function AppRouter() {
                 <main>
                     <Routes>
                         <Route path="/" exact element={<PageHome />} />
+                        <Route path="/movie/:id" element={<PageMovie />} />
                         <Route path="/favorites" exact element={<PageFavorites />} />
                         <Route path="/about" exact element={<PageAbout />} />
                         <Route path="*" exact element={<PageNotFound />} />
