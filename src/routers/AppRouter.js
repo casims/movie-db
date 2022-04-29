@@ -8,7 +8,7 @@ import PageHome from "../pages/PageHome";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
-import '../scss/styles.scss'
+import "../scss/styles.scss";
 
 function AppRouter() {
   const appInfo = {
@@ -20,8 +20,10 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <div className="wrapper">
-        <Header title={appInfo.title} />
-        {/* <main>
+        <Header
+        // title={appInfo.title}
+        />
+        <main>
           <Routes>
             <Route path="/" exact element={<PageHome />} />
             <Route path="/favorites" exact element={<PageFavorites />} />
@@ -33,7 +35,7 @@ function AppRouter() {
           title={appInfo.title}
           copyright={appInfo.copyright}
           author={appInfo.author}
-        /> */}
+        />
       </div>
     </BrowserRouter>
   );

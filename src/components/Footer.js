@@ -1,6 +1,6 @@
 import { getYear } from "../utilities/dates";
 
-function Footer(title, copyright, author) {
+function Footer({ title, copyright, author }) {
   return (
     <footer>
       <p>
