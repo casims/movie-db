@@ -12,7 +12,7 @@ import "../scss/styles.scss";
 
 function AppRouter() {
   const appInfo = {
-    title: "cs Movie Databe",
+    title: "cs Movie Databese",
     author: "Connor, David and Michiko",
     copyright: 2022,
   };
@@ -26,6 +26,20 @@ function AppRouter() {
         <main>
           <Routes>
             <Route path="/" exact element={<PageHome />} />
+            <Route path="sort/popular" element={<PageHome sort="popular" />} />
+            <Route
+              path="sort/top-rated"
+              element={<PageHome sort="top_rated" />}
+            />
+            <Route
+              path="sort/upcoming"
+              slement={<PageHome sort="upcoming" />}
+            />
+            <Route
+              path="sort/now-playing"
+              element={<PageHome sort="now_playing" />}
+            />
+
             <Route path="/favorites" exact element={<PageFavorites />} />
             <Route path="/about" exact element={<PageAbout />} />
             <Route path="*" exact element={<PageNotFound />} />

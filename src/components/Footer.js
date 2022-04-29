@@ -4,7 +4,7 @@ function Footer({ title, copyright, author }) {
   return (
     <footer>
       <p>
-        &copy; {title} by {author} {copyright}
+        &copy; {copyright} {title} by {author}
       </p>
     </footer>
   );

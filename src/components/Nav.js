@@ -22,6 +22,22 @@ const Nav = ({ handleShowHideNav }) => {
           <NavLink to="/favorites">Favorites</NavLink>
         </li>
       </ul>
+      <span className="menu-divider"></span>
+      <ul>
+        <li className="nav-sort">
+          <NavLink to="/sort/popular">Popular</NavLink>
+        </li>
+        <li className="nav-sort">
+          <NavLink to="/sort/top-rated">Top Rated</NavLink>
+        </li>
+        <li className="nav-sort">
+          <NavLink to="/sort/upcoming">Upcoming</NavLink>
+        </li>
+        <li className="nav-sort">
+          <NavLink to="/sort/now-playing">Now Playing</NavLink>
+        </li>
+      </ul>
+      <span className="menu-divider"></span>
     </nav>
   );
 };
