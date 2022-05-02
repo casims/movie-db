@@ -1,6 +1,7 @@
 import logo from "../assets/site-logo.png";
 import Nav from "./Nav";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   // { title }
@@ -28,14 +29,14 @@ function Header() {
 
   return (
     <header className={navOpen ? "show" : undefined}>
-      {/* <div className="nav-logo-title"> */}
-      <img src={logo} alt="site logo" />
-      <div className="title">
-        <h1>
-          {/* {title} */}
-          cs
-        </h1>
-        <h1>Movie Database</h1>
+      <div className="nav-logo-title">
+        <NavLink className="logo" to="/">
+          <img src={logo} alt="site logo" />
+        </NavLink>
+        <div className="title">
+          <h1>cs</h1>
+          <h1>Movie Database</h1>
+        </div>
       </div>
 
       <button
