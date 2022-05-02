@@ -21,30 +21,37 @@ function AppRouter() {
 
   return (
     <BrowserRouter>
-        <div className="wrapper">
-            <Header />
-                <main>
-                    <Routes>
-
-                        <Route path="/" exact element={<PageHome sort="popular" />} />
-                        <Route path="/sort/popular" element={<PageHome sort="popular" />} />
-                        <Route path="/sort/top-rated" element={<PageHome sort="top_rated" />} />
-                        <Route path="/sort/now-playing" element={<PageHome sort="now_playing" />} />
-                        <Route path="/sort/upcoming" element={<PageHome sort="upcoming" />} />
-
-                        <Route path="/single/:id" element={<PageSingle />} />
-                        <Route path="/favorites" exact element={<PageFavorites />} />
-                        <Route path="/about" exact element={<PageAbout />} />
-                        <Route path="*" exact element={<PageNotFound />} />
-
-                    </Routes>
-                </main>
-            <Footer
-              title={appInfo.title}
-              copyright={appInfo.copyright}
-              author={appInfo.author}
+      <div className="wrapper">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" exact element={<PageHome sort="popular" />} />
+            <Route path="/sort/popular" element={<PageHome sort="popular" />} />
+            <Route
+              path="/sort/top-rated"
+              element={<PageHome sort="top_rated" />}
             />
-        </div>
+            <Route
+              path="/sort/now-playing"
+              element={<PageHome sort="now_playing" />}
+            />
+            <Route
+              path="/sort/upcoming"
+              element={<PageHome sort="upcoming" />}
+            />
+
+            <Route path="/single/:id" element={<PageSingle />} />
+            <Route path="/favorites" exact element={<PageFavorites />} />
+            <Route path="/about" exact element={<PageAbout />} />
+            <Route path="*" exact element={<PageNotFound />} />
+          </Routes>
+        </main>
+        <Footer
+          title={appInfo.title}
+          copyright={appInfo.copyright}
+          author={appInfo.author}
+        />
+      </div>
     </BrowserRouter>
   );
 }
