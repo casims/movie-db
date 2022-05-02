@@ -1,5 +1,6 @@
 import { appTitle } from "../globals/globals";
 import { useEffect, useState } from 'react';
+import NavSort from "../components/NavSort";
 import Movies from '../components/Movies';
 import { API_TOKEN } from '../globals/globals';
 import Button from '@mui/material/Button';
@@ -51,6 +52,7 @@ function PageHome({ sort }) {
 
     return (
         <section className="home-page">
+            <NavSort />
             {moviesData !== null && <Movies moviesData={moviesData} />}
             {moviesPage == 1 ?
                 (<Stack direction="row" spacing={2}>

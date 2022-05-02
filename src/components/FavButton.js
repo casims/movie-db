@@ -17,7 +17,7 @@ function FavButton({ movieObj, remove, handleFavClick }) {
 
     return (
         <>
-            {remove === false ? (<IconButton onClick={handleAddFav} > <StarBorderIcon sx={{ fontSize: "3.5rem", color:"red" }}/> </IconButton>):(<IconButton onClick={handleRemoveFav}><StarIcon sx={{ fontSize: "3.5rem", color:"red" }}/></IconButton>)}
+            {remove === false ? (<IconButton onClick={handleAddFav} > <StarBorderIcon /> </IconButton>):(<IconButton onClick={handleRemoveFav}><StarIcon /></IconButton>)}
             
         </>
     );
