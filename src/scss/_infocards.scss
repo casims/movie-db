@@ -36,10 +36,6 @@
     padding: 0 1.3rem 1.3rem 1.3rem;
   }
 
-#favorites-card p {
-  padding-top: 1.3rem;
-}
-
 @media (min-width: 560px) {
   .info-card {
     h2 {
@@ -52,9 +48,5 @@
     p {
       padding: 0 2.6rem 2.6rem 2.6rem;
     }
-  }
-
-  #favorites-card p {
-    padding-top: 2.6rem;
   }
 }

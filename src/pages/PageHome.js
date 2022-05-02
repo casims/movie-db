@@ -56,17 +56,20 @@ function PageHome({ sort }) {
             {moviesData !== null && <Movies moviesData={moviesData} />}
             {moviesPage == 1 ?
                 (<Stack direction="row" spacing={2}>
-                    <Button onClick={nextPage} variant="contained" endIcon={<NavigateNextIcon />}>
+                    {/* <Button className="next-button" onClick={nextPage} variant="contained" endIcon={<NavigateNextIcon />}>
                         Next Page
-                    </Button>
+                    </Button> */}
+                    <button className="next-button" onClick={nextPage}>Next</button>
                 </Stack>) :
                 (<Stack direction="row" spacing={2}>
-                    <Button onClick={prevPage} variant="contained" startIcon={<NavigateBeforeIcon/>}>
+                    {/* <Button className="prev-button" onClick={prevPage} variant="contained" startIcon={<NavigateBeforeIcon/>}>
                         Prev Page
                     </Button>
-                    <Button onClick={nextPage} variant="contained" endIcon={<NavigateNextIcon />}>
+                    <Button className="next-button" onClick={nextPage} variant="contained" endIcon={<NavigateNextIcon />}>
                         Next Page
-                    </Button>
+                    </Button> */}
+                    <button className="prev-button" onClick={prevPage}>Back</button>
+                    <button className="next-button" onClick={nextPage}>Next</button>
                 </Stack>)
             }
         </section>

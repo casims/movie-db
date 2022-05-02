@@ -5,6 +5,10 @@
     display: none;
 }
 
+.movies-container {
+    padding-bottom: 5rem !important;
+}
+
 .movie-card {
     background-color: $darkGrey;
     width: 88%;
@@ -82,6 +86,38 @@
             }
         }
     }
+}
+
+.next-button,
+.prev-button {
+    background-color: $darkGrey;
+    font-family: "SourceSans Light";
+    color: $white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: .8rem 1.2rem;
+    margin: 1rem !important;
+    margin-bottom: 4rem !important;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $CSyellow;
+    }
+}
+
+.next-button::after {
+    content: "  \00BB";
+    font-size: 1.5rem;
+}
+
+.prev-button::before {
+    content: "\00AB  ";
+    font-size: 1.5rem;
+}
+
+.css-e53awj-MuiStack-root {
+    justify-content: center;
 }
 
 @media (min-width: 640px) {

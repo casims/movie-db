@@ -27,21 +27,19 @@ function SingleCard({movie, isFav}) {
                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                 }  
             </div>
-            <div className="hover-description">
+            <div className="movie-description">
+                <h2>{movie.title}</h2>
                 <p className="single-description">{movie.overview}</p>
+                <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
+                <p className="single-runtime">Runtime: {movie.runtime + "m"}</p>
+                <p className="single-date">Release Date: {movie.release_date}</p>
                 <Link to={`/`}>Home Page</Link>
                 <div className="btn-favourite">
-                {isFav ? 
-                    <FavButton movieObj={movie} remove={true} handleFavClick={handleFavClick} /> : 
-                    <FavButton movieObj={movie} handleFavClick={handleFavClick} />
-                }
-            </div>
-        </div>
-            <div className="single-movie-info">
-                <h2>{movie.title}</h2>
-                <p className="single-runtime">{movie.runtime + "m"}</p>
-                <p className="single-date">{movie.release_date}</p>
-                <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
+                    {isFav ? 
+                        <FavButton movieObj={movie} remove={true} handleFavClick={handleFavClick} /> : 
+                        <FavButton movieObj={movie} handleFavClick={handleFavClick} />
+                    }
+                </div>
             </div>
 
         </div>

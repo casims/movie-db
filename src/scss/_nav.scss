@@ -196,3 +196,11 @@ header h1:last-child {
     display: none;
   }
 }
+
+.nav-sort-desktop,
+.main-nav,
+.nav-sort {
+  .active {
+    color: $CSyellow;
+  }
+}

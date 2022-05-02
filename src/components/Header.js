@@ -33,9 +33,9 @@ function Header() {
       <div className="title">
         <h1>
           {/* {title} */}
-          cs
+          gold
         </h1>
-        <h1>Movie Database</h1>
+        <h1>Reel Movies</h1>
       </div>
 
       <button

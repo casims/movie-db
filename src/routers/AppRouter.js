@@ -14,7 +14,7 @@ import "../scss/styles.scss";
 
 function AppRouter() {
   const appInfo = {
-    title: "cs Movie Databese",
+    title: "gold Reel Movies",
     author: "Connor, David and Michiko",
     copyright: 2022,
   };
