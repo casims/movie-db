@@ -9,6 +9,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  // position: fixed; /* Set the navbar to fixed position */
+  // top: 0; /* Position the navbar at the top of the page */
+  // width: 100%;
+  // z-index: 2;
 
   @media (min-width: em(800)) {
     flex-wrap: nowrap;
@@ -36,7 +40,7 @@ header {
 
 header h1 {
   color: $CSyellow;
-  font-family: SourceSans Regular;
+  // font-weight: 600;
   margin: 0;
   margin-right: 0.2rem;
   font-size: 1.6rem;
