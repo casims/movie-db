@@ -15,21 +15,35 @@ header {
   }
 }
 
-img {
+.nav-logo-title {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: em(800)) {
+    // width: 40rem;
+  }
+}
+
+.nav-logo-title img {
   width: 3rem;
   height: 3rem;
-  margin: 0.8rem;
-  // @media (min-width: em(800)) {
-  //   margin: 0 2rem;
-  // }
+  margin: 0.8rem 0.3rem 0.8rem 0.8rem;
+
+  @media (min-width: em(800)) {
+    margin-right: 3rem;
+  }
 }
 
 header h1 {
-  font-size: 0.9rem;
   color: $CSyellow;
+  font-family: SourceSans Regular;
   margin: 0;
-  margin-right: 0.5rem;
-  font-size: 2.4rem;
+  margin-right: 0.2rem;
+  font-size: 1.6rem;
+
+  @media (min-width: em(800)) {
+    font-size: 2rem;
+  }
 }
 
 header h1:last-child {
@@ -37,7 +51,10 @@ header h1:last-child {
 }
 
 .title {
-  display: none;
+  // display: none;
+  display: flex;
+  flex-direction: row;
+  // width: 100%;
 
   @media (min-width: em(800)) {
     display: flex;
@@ -78,7 +95,7 @@ header h1:last-child {
     text-decoration: none;
     display: inline;
     line-height: 40px;
-    font-size: 1.8em;
+    font-size: 2rem;
     line-height: 1.5;
     @at-root .main-nav li:not(:first-child) a {
       border-top: 1px solid $darkGrey;
@@ -94,7 +111,7 @@ header h1:last-child {
   @media (min-width: em(800)) {
     margin-right: 1rem;
     height: auto;
-    width: 60rem;
+    width: 30rem;
     visibility: visible;
     transition: none;
 
