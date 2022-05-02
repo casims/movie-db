@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { API_KEY } from '../globals/globals';
 import { useEffect, useState } from 'react';
-import noPoster from '../assets/no-movie-poster.jpg';
+import noPoster from '../assets/no-poster.png';
 // import IconButton from '@mui/material/IconButton';
 // import StarBorderIcon from '@mui/icons-material/StarBorder';
 import FavButton from '../components/FavButton';

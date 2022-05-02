@@ -36,9 +36,9 @@ header {
 
 header h1 {
   color: $CSyellow;
-  font-family: SourceSans Regular;
+  font-family: "SourceSans Regular";
   margin: 0;
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
   font-size: 1.6rem;
 
   @media (min-width: em(800)) {

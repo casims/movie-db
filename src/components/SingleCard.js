@@ -33,7 +33,7 @@ function SingleCard({movie, isFav}) {
                 <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
                 <p className="single-runtime">Runtime: {movie.runtime + "m"}</p>
                 <p className="single-date">Release Date: {movie.release_date}</p>
-                <Link to={`/`}>Home Page</Link>
+                <Link to={`/`}>Home</Link>
                 <div className="btn-favourite">
                     {isFav ? 
                         <FavButton movieObj={movie} remove={true} handleFavClick={handleFavClick} /> : 
