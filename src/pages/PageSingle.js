@@ -67,7 +67,7 @@ const PageSingle = () => {
 return (
   <section className="single-page">
     {
-      <SingleCard video={movieDataTrailer} trailerKey={trailerKey} movie={singleMovie} isFav={isFav(favs, null, singleMovie.id)}/>
+      singleMovie !== {} && <SingleCard video={movieDataTrailer} trailerKey={trailerKey} movie={singleMovie} isFav={isFav(favs, null, singleMovie.id)}/>
     }
   </section>
 )
