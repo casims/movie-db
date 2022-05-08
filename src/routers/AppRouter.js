@@ -10,6 +10,7 @@ import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import PageNotFound from "../pages/PageNotFound";
 import PageSingle from "../pages/PageSingle";
+import PageSearch from "../pages/PageSearch";
 import "../scss/styles.scss";
 
 function AppRouter() {
@@ -41,6 +42,7 @@ function AppRouter() {
             />
 
             <Route path="/single/:id" element={<PageSingle />} />
+            <Route path="/search/:value" element={<PageSearch />} />
             <Route path="/favorites" exact element={<PageFavorites />} />
             <Route path="/about" exact element={<PageAbout />} />
             <Route path="*" exact element={<PageNotFound />} />

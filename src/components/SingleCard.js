@@ -2,15 +2,12 @@ import { Link } from 'react-router-dom';
 import { API_KEY } from '../globals/globals';
 import { useEffect, useState } from 'react';
 import noPoster from '../assets/no-poster.png';
-import IconButton from '@mui/material/IconButton';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
 import FavButton from './FavButton';
 import { useDispatch } from 'react-redux';
 import { addFav, deleteFav } from '../features/favorite/favSlice';
-
-function SingleCard({movie, isFav}) {
+//, movie, isFav
+function SingleCard({video, trailerKey, movie, isFav}) {
     const dispatch = useDispatch();
-
     function handleFavClick(addToFav, obj){
         if(addToFav === true){
             dispatch(addFav(obj));
@@ -18,7 +15,6 @@ function SingleCard({movie, isFav}) {
             dispatch(deleteFav(obj));
         }   
     }
-
     return (
         <div className="single-movie-card">
             <div className="single-movie-poster">
@@ -41,7 +37,19 @@ function SingleCard({movie, isFav}) {
                     }
                 </div>
             </div>
-
+            {
+                trailerKey !== false ?
+                <iframe
+                width='660'
+                height='315'
+                src={`https://www.youtube.com/embed/${trailerKey}`}
+                title={video.title}
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+                ></iframe> :
+                <h3>No Trailers Available</h3>
+            }
         </div>
     )
 }

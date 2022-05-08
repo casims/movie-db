@@ -17,11 +17,11 @@ function Header() {
     }
   };
 
-  let mediaQuery = window.matchMedia("(min-width: 600px)");
+  let mediaQuery = window.matchMedia("(min-width: 800px)");
   mediaQuery.addEventListener("change", isDesktop);
 
   useEffect(() => {
-    let mediaQuery = window.matchMedia("(min-width: 600px)");
+    let mediaQuery = window.matchMedia("(min-width: 800px)");
     mediaQuery.addEventListener("change", isDesktop);
     // this is the cleanup function to remove the listener
     return () => mediaQuery.removeEventListener("change", isDesktop);
@@ -38,7 +38,6 @@ function Header() {
           <h1>Reel Movies</h1>
         </div>
       </div>
-
       <button
         className="btn-main-nav"
         onMouseDown={(e) => {
