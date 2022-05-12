@@ -14,6 +14,7 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
     } else {
       dispatch(deleteFav(obj));
     }
+  }
     return (
         <>
         <div className="single-movie-card">
@@ -52,19 +53,20 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
                 ></iframe> :
                 <h3>No Trailers Available</h3>
             }
-      <div>
-        <p>Casts</p>
-        <ul>
-          {credits !== false ? (
-            credits.map((credit) => <li>{credit.name}</li>)
-          ) : (
-            <h3>No Cast Infomation Available</h3>
-          )}
-        </ul>
-      </div>
+          <div>
+            <p>Casts</p>
+            <ul>
+              {credits !== false ? (
+                credits.map((credit) => <li>{credit.name}</li>)
+              ) : (
+                <h3>No Cast Infomation Available</h3>
+              )}
+            </ul>
+          </div>
         </div>
         </>
     )
+  
 }
 
 export default SingleCard;
