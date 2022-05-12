@@ -19,7 +19,7 @@ function SearchBar({handleShowHideNav}) {
     return (
       <div className="searchbar-container">
       <InputBase
-        placeholder=" Search mvies"
+        placeholder="Search"
         inputProps={{ 'aria-label': 'search movies' }}
         onChange={e=> {setInputValue(e.target.value)}}
       />

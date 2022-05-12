@@ -90,6 +90,20 @@
     }
 }
 
+.trailer-card {
+    height: 16rem;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 400px) {
+    .trailer-card {
+        height: 20rem;
+    }
+}
+
 @media (min-width: 700px) {
     .single-movie-card {
         margin: 2rem auto 0;
@@ -123,6 +137,20 @@
             }
         }
     }
+    .trailer-card {
+        margin: 2rem auto;
+        width: 88%;
+        height: 22rem;
+        max-width: 50rem;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 900px) {
+    .trailer-card {
+        height: 26rem;
+    }
 }
 
 @media (min-width: 1300px) {
@@ -131,5 +159,8 @@
         .single-movie-poster {
             flex: 0 0 calc(40rem / 1.5);
         }
+    }
+    .trailer-card {
+        height: calc(50rem * 0.5625);
     }
 }

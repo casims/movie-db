@@ -12,12 +12,14 @@ const PageFavorites = () => {
   }, []);
 
   return (
-    <section id="favorites-card">
+    <>
       {favs.length < 1 ? (
-        <p>
-          Sorry, but you have no favorite movies right now. Return to the home
-          screen and tap the "star" icon on a movie to favorite it.
-        </p>
+        <section id="favorites-card" className="info-card">
+          <p>
+            Sorry, but you have no favorite movies right now. Return to the home
+            screen and tap the "star" icon on a movie to favorite it.
+          </p>
+        </section>
       ) : (
         <div className="movies-container">
           {favs.map((movie) => (
@@ -29,7 +31,7 @@ const PageFavorites = () => {
           ))}
         </div>
       )}
-    </section>
+    </>
   );
 };
 export default PageFavorites;

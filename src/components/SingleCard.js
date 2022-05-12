@@ -16,6 +16,7 @@ function SingleCard({video, trailerKey, movie, isFav}) {
         }   
     }
     return (
+        <>
         <div className="single-movie-card">
             <div className="single-movie-poster">
                 {movie.poster_path === null ? 
@@ -37,11 +38,13 @@ function SingleCard({video, trailerKey, movie, isFav}) {
                     }
                 </div>
             </div>
+        </div>
+        <div className="trailer-card">
             {
                 trailerKey !== false ?
                 <iframe
-                width='660'
-                height='315'
+                // width='660'
+                // height='315'
                 src={`https://www.youtube.com/embed/${trailerKey}`}
                 title={video.title}
                 frameBorder='0'
@@ -49,8 +52,9 @@ function SingleCard({video, trailerKey, movie, isFav}) {
                 allowFullScreen
                 ></iframe> :
                 <h3>No Trailers Available</h3>
-            }
+            }     
         </div>
+        </>
     )
 }
 
