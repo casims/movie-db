@@ -1,19 +1,18 @@
-import { Link } from 'react-router-dom';
-import { API_KEY } from '../globals/globals';
-import { useEffect, useState } from 'react';
-import noPoster from '../assets/no-poster.png';
-import FavButton from './FavButton';
-import { useDispatch } from 'react-redux';
-import { addFav, deleteFav } from '../features/favorite/favSlice';
+import { Link } from "react-router-dom";
+import { API_KEY } from "../globals/globals";
+import { useEffect, useState } from "react";
+import noPoster from "../assets/no-poster.png";
+import FavButton from "./FavButton";
+import { useDispatch } from "react-redux";
+import { addFav, deleteFav } from "../features/favorite/favSlice";
 //, movie, isFav
-function SingleCard({video, trailerKey, movie, isFav}) {
-    const dispatch = useDispatch();
-    function handleFavClick(addToFav, obj){
-        if(addToFav === true){
-            dispatch(addFav(obj));
-        }else{
-            dispatch(deleteFav(obj));
-        }   
+function SingleCard({ credits, video, trailerKey, movie, isFav }) {
+  const dispatch = useDispatch();
+  function handleFavClick(addToFav, obj) {
+    if (addToFav === true) {
+      dispatch(addFav(obj));
+    } else {
+      dispatch(deleteFav(obj));
     }
     return (
         <>
@@ -52,10 +51,20 @@ function SingleCard({video, trailerKey, movie, isFav}) {
                 allowFullScreen
                 ></iframe> :
                 <h3>No Trailers Available</h3>
-            }     
+            }
+      <div>
+        <p>Casts</p>
+        <ul>
+          {credits !== false ? (
+            credits.map((credit) => <li>{credit.name}</li>)
+          ) : (
+            <h3>No Cast Infomation Available</h3>
+          )}
+        </ul>
+      </div>
         </div>
         </>
     )
 }
 
-export default SingleCard; 
+export default SingleCard;

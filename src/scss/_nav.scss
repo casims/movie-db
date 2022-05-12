@@ -9,6 +9,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  // position: fixed; /* Set the navbar to fixed position */
+  // top: 0; /* Position the navbar at the top of the page */
+  // width: 100%;
+  // z-index: 2;
 
   @media (min-width: em(800)) {
     flex-wrap: nowrap;
@@ -114,7 +118,7 @@ header h1:last-child {
   @media (min-width: em(800)) {
     margin-right: 1rem;
     height: auto;
-    width:initial;
+    width: initial;
     visibility: visible;
     transition: none;
 
