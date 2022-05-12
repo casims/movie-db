@@ -64,9 +64,11 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
       <div>
         <p>Casts</p>
         <ul>
-          {credits.map((credit) => (
-            <li>{credit.name}</li>
-          ))}
+          {credits !== false ? (
+            credits.map((credit) => <li>{credit.name}</li>)
+          ) : (
+            <h3>No Cast Infomation Available</h3>
+          )}
         </ul>
       </div>
     </div>

@@ -97,7 +97,7 @@ const PageSingle = () => {
 
   return (
     <section className="single-page">
-      {movieDataTrailer !== false && (
+      {movieDataTrailer !== {} && (
         <SingleCard
           credits={creditsData}
           video={movieDataTrailer}
