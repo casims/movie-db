@@ -14,53 +14,44 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
     } else {
       dispatch(deleteFav(obj));
     }
-  }
-  return (
-    <div className="single-movie-card">
-      <div className="single-movie-poster">
-        {movie.poster_path === null ? (
-          <img src={noPoster} alt="No poster available." />
-        ) : (
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            alt={movie.title}
-          />
-        )}
-      </div>
-      <div className="movie-description">
-        <h2>{movie.title}</h2>
-        <p className="single-description">{movie.overview}</p>
-        <p className="single-rating">
-          Rating: <span>{movie.vote_average * 10 + "%"}</span>
-        </p>
-        <p className="single-runtime">Runtime: {movie.runtime + "m"}</p>
-        <p className="single-date">Release Date: {movie.release_date}</p>
-        <Link to={`/`}>Home</Link>
-        <div className="btn-favourite">
-          {isFav ? (
-            <FavButton
-              movieObj={movie}
-              remove={true}
-              handleFavClick={handleFavClick}
-            />
-          ) : (
-            <FavButton movieObj={movie} handleFavClick={handleFavClick} />
-          )}
+    return (
+        <>
+        <div className="single-movie-card">
+            <div className="single-movie-poster">
+                {movie.poster_path === null ? 
+                    <img src={noPoster} alt="No poster available." /> : 
+                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                }  
+            </div>
+            <div className="movie-description">
+                <h2>{movie.title}</h2>
+                <p className="single-description">{movie.overview}</p>
+                <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
+                <p className="single-runtime">Runtime: {movie.runtime + "m"}</p>
+                <p className="single-date">Release Date: {movie.release_date}</p>
+                <Link to={`/`}>Home</Link>
+                <div className="btn-favourite">
+                    {isFav ? 
+                        <FavButton movieObj={movie} remove={true} handleFavClick={handleFavClick} /> : 
+                        <FavButton movieObj={movie} handleFavClick={handleFavClick} />
+                    }
+                </div>
+            </div>
         </div>
-      </div>
-      {trailerKey !== false ? (
-        <iframe
-          width="660"
-          height="315"
-          src={`https://www.youtube.com/embed/${trailerKey}`}
-          title={video.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      ) : (
-        <h3>No Trailers Available</h3>
-      )}
+        <div className="trailer-card">
+            {
+                trailerKey !== false ?
+                <iframe
+                // width='660'
+                // height='315'
+                src={`https://www.youtube.com/embed/${trailerKey}`}
+                title={video.title}
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+                ></iframe> :
+                <h3>No Trailers Available</h3>
+            }
       <div>
         <p>Casts</p>
         <ul>
@@ -71,8 +62,9 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
           )}
         </ul>
       </div>
-    </div>
-  );
+        </div>
+        </>
+    )
 }
 
 export default SingleCard;

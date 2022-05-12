@@ -26,7 +26,7 @@ const Nav = ({ handleShowHideNav }) => {
         <li onClick={closeNav}>
           <NavLink to="/favorites">Favorites</NavLink>
         </li>
-        <li>
+        <li className="search-listitem">
           <SearchBar handleShowHideNav={handleShowHideNav}/>
         </li>
       </ul>
