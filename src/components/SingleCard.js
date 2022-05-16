@@ -27,16 +27,26 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
             <div className="movie-description">
                 <h2>{movie.title}</h2>
                 <p className="single-description">{movie.overview}</p>
-                <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
-                <p className="single-runtime">Runtime: {movie.runtime + "m"}</p>
-                <p className="single-date">Release Date: {movie.release_date}</p>
-                <Link to={`/`}>Home</Link>
                 <div className="btn-favourite">
                     {isFav ? 
                         <FavButton movieObj={movie} remove={true} handleFavClick={handleFavClick} /> : 
                         <FavButton movieObj={movie} handleFavClick={handleFavClick} />
                     }
                 </div>
+                <p className="single-rating">Rating: <span>{movie.vote_average*10 + '%'}</span></p>
+                <p className="single-runtime">Runtime: {movie.runtime + "m"}</p>
+                <p className="single-date">Release Date: {movie.release_date}</p>
+                <div className="credits-section">
+                  <h3>Cast</h3>
+                  <ul>
+                    {credits !== false ? (
+                      credits.map((credit) => <li>{credit.name}</li>)
+                    ) : (
+                      <h4>No Cast Infomation Available</h4>
+                    )}
+                  </ul>
+                </div>
+              <Link to={`/`}>Home</Link>
             </div>
         </div>
         <div className="trailer-card">
@@ -53,18 +63,8 @@ function SingleCard({ credits, video, trailerKey, movie, isFav }) {
                 ></iframe> :
                 <h3>No Trailers Available</h3>
             }
-          <div>
-            <p>Casts</p>
-            <ul>
-              {credits !== false ? (
-                credits.map((credit) => <li>{credit.name}</li>)
-              ) : (
-                <h3>No Cast Infomation Available</h3>
-              )}
-            </ul>
-          </div>
         </div>
-        </>
+      </>
     )
   
 }
