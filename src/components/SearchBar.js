@@ -11,9 +11,11 @@ function SearchBar({handleShowHideNav}) {
     const [inputValue, setInputValue] = useState("");
     function searchBar(e){
       // if(e.key == 'Enter'){
+      if (inputValue !== "") {
         console.log(inputValue);
         handleShowHideNav();
         navigate(`/search/${inputValue}`);
+      }
       //}
     }
     return (
@@ -21,7 +23,7 @@ function SearchBar({handleShowHideNav}) {
       <InputBase
         placeholder="Search"
         inputProps={{ 'aria-label': 'search movies' }}
-        onChange={e=> {setInputValue(e.target.value)}}
+        onChange={e=> {setInputValue(e.target.value.trim())}}
       />
       <IconButton type="submit" aria-label="search"  onClick={searchBar}>
         <SearchIcon />
