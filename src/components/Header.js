@@ -34,8 +34,11 @@ function Header() {
           <img src={logo} alt="site logo" />
         </NavLink>
         <div className="title">
-          <h1>gold</h1>
-          <h1>Reel Movies</h1>
+          <h1>
+            <span className="title-span">gold</span>Reel Movies
+          </h1>
+          {/* <h1>gold</h1>
+          <h1>Reel Movies</h1> */}
         </div>
       </div>
       <button
